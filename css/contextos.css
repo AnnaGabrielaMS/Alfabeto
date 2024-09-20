@@ -1,0 +1,97 @@
+header h2 {
+    text-align: center;
+    font-size: 80px;
+}
+
+.flex-container {
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    flex: 1 1 calc(45% - 30px); /* Cada card ocupa 50% da largura disponível */
+    max-width: calc(45% - 30px); /* Limita a largura máxima dos cards */
+    overflow: hidden;
+    text-align: left;
+    border-radius: 10px;
+    background-color: rgba(179, 176, 176, 0.5);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s;
+    padding: 20px;
+}
+
+.box:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse sobre o card */
+}
+
+.box img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 40px;
+    border-radius: 8px;
+}
+
+.box h3 {
+    font-size: 35px;
+}
+
+@media (max-width: 1024px) {
+    .box {
+        flex: 1 1 calc(70% - 30px); /* Cada card ocupa 70% da largura disponível em telas menores */
+        max-width: calc(70% - 30px);
+    }
+
+    .box img {
+        width: 120px;
+        height: 120px;
+        margin-right: 40px;
+    }
+
+    .box h3 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .box {
+        flex: 1 1 calc(100% - 30px); /* Cada card ocupa 100% da largura disponível em telas pequenas */
+        max-width: calc(100% - 30px);
+    }
+
+    .box img {
+        width: 100px;
+        height: 100px;
+        margin-right: 40px;
+    }
+
+    .box h3 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h2 {
+        font-size: 60px;
+    }
+
+    .box {
+        padding: 15px;
+    }
+
+    .box img {
+        width: 80px;
+        height: 80px;
+        margin-right: 40px;
+    }
+
+    .box h3 {
+        font-size: 20px;
+    }
+}

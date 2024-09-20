@@ -1,0 +1,100 @@
+.opcoes {
+    display: grid;
+    font-size: 50px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.titulo {
+    display: block;
+    margin: auto;
+    max-width: 50%;
+    height: auto;
+}
+
+.botao {
+    width: 150px;
+    height: 90px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50px;
+    margin: 5px;
+    border: 2px solid white;
+}
+
+.play {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: white;
+}
+
+.config {
+    background-color: transparent;
+    color: white;
+}
+
+.sobre {
+    background-color: rgba(255, 255, 255, 0.938);
+    color: rgb(25, 225, 172);
+}
+
+.sobre:hover {
+    color: white;
+}
+
+.botao:active {
+    box-shadow: 0 5px rgb(7, 177, 55);
+    transform: translateY(4px);
+}
+
+.botao:hover {
+    background-color: rgb(9, 237, 74);
+}
+
+.botao i {
+    font-size:40px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .titulo {
+        padding: 20px;
+        max-width: 80%;
+    }
+
+    .opcoes {
+        margin-top: 50px;
+    }
+    
+    .botao {
+        width: 150px;
+        margin: 30px;
+        height: 90px;
+    }
+
+    .botao i {
+        font-size: 40px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .opcoes {
+        margin-top: 50px;
+    }
+    
+    .botao {
+        width: 120px;
+        margin: 25px;
+        height: 70px;
+    }
+
+    .botao i {
+        font-size: 24px;
+    }
+
+}

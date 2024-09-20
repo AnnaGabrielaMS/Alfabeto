@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/contextos.css">
+    <title>Niveis</title>
+</head>
+<body>
+    
+    <header>
+        <h2>NÍVEIS</h2>
+    </header>
+    <main>
+        <div class="flex-container">
+            <a href="jogo.html" class="box" onclick="escolherTeclado('vogais')">
+                <img src="../img/vogais.png" alt="Vogais">
+                <h3>VOGAIS</h3>
+            </a>
+            <a href="jogo.html" class="box" onclick="escolherTeclado('consoantes')">
+                <img src="../img/consoantes.png" alt="Consoantes">
+                <h3>CONSOANTES</h3>
+            </a>
+            <a href="jogo.html" class="box" onclick="escolherTeclado('alfabeto')">
+                <img src="../img/alfabeto.png" alt="Alfabeto">
+                <h3>ALFABETO</h3>
+            </a>
+        </div>
+    </main>
+
+    <script>
+        function escolherTeclado(teclado) {
+            localStorage.setItem('tecladoEscolhido', teclado);
+        }
+    </script>
+</body>
+</html>

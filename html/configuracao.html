@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuração</title>
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/configuracao.css">
+    <script src="https://kit.fontawesome.com/c141c3c5e6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <header>
+        <div>
+            <h2>CONFIGURAÇÕES</h2>
+        </div>
+    </header>
+    <main>
+        <div>
+            <p>TIPO DE LETRA</p>
+        </div>
+        <div class="escolha-tema">
+            <div class="tipo-letra">
+                <input type="radio" id="cursiva" name="tipo" value="cursiva">
+                <label for="cursiva">Cursiva</label><br>
+                <input type="radio" id="bastao" name="tipo" value="bastao">
+                <label for="bastao">Bastão</label>
+            </div>
+            <div class="tamanho-letra">
+                <input type="radio" id="maiuscula" name="letra" value="maiuscula">
+                <label for="maiuscula">Maiúscula</label><br>
+                <input type="radio" id="minuscula" name="letra" value="minuscula">
+                <label for="minuscula">Minúscula</label>
+            </div>
+        </div>
+
+        <div class="visualizacao">
+            <p>VISUALIZAÇÃO</p>
+            <p class="visualizacao-letras">a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+        </div>
+
+        <div>
+            <p>SOM DE ACERTO</p>
+            <div class="opcao-audio">
+                <input type="radio" id="opcao1" name="opcao" value="opcao1">
+                <label for="opcao1">Opção 1</label><br>
+                <input type="radio" id="opcao2" name="opcao" value="opcao2">
+                <label for="opcao2">Opção 2</label><br>
+                <input type="radio" id="opcao3" name="opcao" value="opcao3">
+                <label for="opcao3">Opção 3</label>
+            </div>
+        </div>
+        
+
+        <div>
+            <button class="botao-salvar"><i class="fa-solid fa-floppy-disk"></i></button>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,13 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(rgb(9, 156, 75), rgb(8, 165, 134));
+    min-height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    padding-top: 50px;
+}
