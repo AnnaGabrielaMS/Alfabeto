@@ -1,0 +1,73 @@
+{
+    "contextos": [
+      {
+        "nome": "CORES",
+        "palavras": [
+          "VERMELHO",
+          "AZUL",
+          "AMARELO",
+          "VERDE",
+          "ROXO",
+          "LARANJA",
+          "PRETO",
+          "BRANCO",
+          "ROSA",
+          "CINZA"
+        ]
+      },
+      {
+        "nome": "FRUTAS",
+        "palavras": [
+          "BANANA",
+          "UVA",
+          "LARANJA",
+          "ABACAXI",
+          "MORANGO",
+          "MELANCIA",
+          "PERA",
+          "MANGA",
+          "KIWI"
+        ]
+      },
+      {
+        "nome": "ANIMAIS",
+        "palavras": [
+          "CACHORRO",
+          "GATO",
+          "TIGRE",
+          "ELEFANTE",
+          "GIRAFA",
+          "CAVALO",
+          "OVELHA",
+          "PEIXE",
+          "MACACO"
+        ]
+      },
+      {
+        "nome": "PAÍSES",
+        "palavras": [
+          "BRASIL",
+          "ALEMANHA",
+          "ARGENTINA",
+          "CHINA",
+          "URUGUAI",
+          "CHILE",
+          "EGITO",
+          "ESPANHA"
+        ]
+      },
+      {
+        "nome": "OBJETOS",
+        "palavras": [
+          "CADEIRA",
+          "MESA",
+          "COMPUTADOR",
+          "TELEFONE",
+          "CANETA",
+          "COPO",
+          "LIVRO",  
+          "MOCHILA"
+        ]
+      }
+    ]
+  }

@@ -6,6 +6,8 @@
     <title>Configuração</title>
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/configuracao.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../img/logo.png">
     <script src="https://kit.fontawesome.com/c141c3c5e6.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -36,7 +38,7 @@
 
         <div class="visualizacao">
             <p>VISUALIZAÇÃO</p>
-            <p class="visualizacao-letras">a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+            <p class="fonteDaLetra visualizacao-letras">a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
         </div>
 
         <div>
@@ -53,8 +55,9 @@
         
 
         <div>
-            <button class="botao-salvar"><i class="fa-solid fa-floppy-disk"></i></button>
+            <button class="botao-salvar" onclick="mudarLetra()"><i class="fa-solid fa-floppy-disk"></i></button>
         </div>
     </main>
+    <script src="../js/configuracao.js"></script>
 </body>
 </html>

@@ -11,3 +11,13 @@ body{
     color: white;
     padding-top: 50px;
 }
+
+@font-face {
+    font-family: 'Maria Lucia';
+    src: url('/Maria_lucia.ttf') format('truetype');
+    font-weight: normal;
+}
+
+.fonte-cursiva {
+    font-family: 'Maria Lucia', cursive;
+}

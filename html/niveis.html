@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/contextos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../img/logo.png">
     <title>Niveis</title>
 </head>
 <body>
@@ -16,15 +18,15 @@
         <div class="flex-container">
             <a href="jogo.html" class="box" onclick="escolherTeclado('vogais')">
                 <img src="../img/vogais.png" alt="Vogais">
-                <h3>VOGAIS</h3>
+                <h3 class="fonteDaLetra">VOGAIS</h3>
             </a>
             <a href="jogo.html" class="box" onclick="escolherTeclado('consoantes')">
                 <img src="../img/consoantes.png" alt="Consoantes">
-                <h3>CONSOANTES</h3>
+                <h3 class="fonteDaLetra">CONSOANTES</h3>
             </a>
             <a href="jogo.html" class="box" onclick="escolherTeclado('alfabeto')">
                 <img src="../img/alfabeto.png" alt="Alfabeto">
-                <h3>ALFABETO</h3>
+                <h3 class="fonteDaLetra">ALFABETO</h3>
             </a>
         </div>
     </main>
@@ -34,5 +36,6 @@
             localStorage.setItem('tecladoEscolhido', teclado);
         }
     </script>
+    <script src="../js/configuracao.js"></script>
 </body>
 </html>

@@ -20,6 +20,7 @@ header h2 {
     text-align: left;
     border-radius: 10px;
     background-color: rgba(179, 176, 176, 0.5);
+    box-shadow: 5px 5px 5px rgba(101, 96, 96);
     text-decoration: none;
     color: inherit;
     transition: transform 0.2s;

@@ -13,13 +13,35 @@ if (tecladoEscolhido === 'vogais') {
     document.getElementById('alfabeto').style.display = 'block';
 }
 
-const palavraSecreta = "Ovelha".toUpperCase();
+const palavraSecreta = "AVIAO".toUpperCase();
 let palavraAtual = Array(palavraSecreta.length).fill("_");
 
-// Função que atualiza a exibição dos traços no HTML
 function exibirPalavra() {
     const palavraContainer = document.getElementById('palavra');
+
+    if (tecladoEscolhido === 'vogais') {
+        for (let i = 0; i < palavraSecreta.length; i++) {
+            if (isConsoante(palavraSecreta[i])) {
+                palavraAtual[i] = palavraSecreta[i];
+            }
+        }
+    } else if (tecladoEscolhido === 'consoantes') {
+        for (let i = 0; i < palavraSecreta.length; i++) {
+            if (isVogal(palavraSecreta[i])) {
+                palavraAtual[i] = palavraSecreta[i];
+            }
+        }
+    } 
+
     palavraContainer.textContent = palavraAtual.join(" ");
+}
+
+function isVogal(letra) {
+    return ["A", "E", "I", "O", "U"].includes(letra);
+}
+
+function isConsoante(letra) {
+    return !isVogal(letra);
 }
 
 function desabilitarBotao(botao) {
@@ -31,7 +53,6 @@ function desabilitarBotao(botao) {
 function letraClicada(letra) {
     let acertou = false;
     
-    // Verifica se a letra está na palavra secreta
     for (let i = 0; i < palavraSecreta.length; i++) {
         if (palavraSecreta[i] === letra) {
             palavraAtual[i] = letra;
@@ -39,10 +60,8 @@ function letraClicada(letra) {
         }
     }
     
-    // Atualiza a exibição da palavra na tela
     exibirPalavra();
     
-    // Desabilitar o botão após o clique
     const botoes = document.querySelectorAll(`button[onclick="letraClicada('${letra}')"]`);;
     botoes.forEach(desabilitarBotao);
 }
