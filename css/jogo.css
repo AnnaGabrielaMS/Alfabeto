@@ -12,7 +12,9 @@ main {
 .container img {
     width: 450px;
     height: auto;
+    max-height: 270px;
     margin-bottom: 20px;
+    object-fit: contain;
 }
 
 .container p {
@@ -119,5 +121,4 @@ tr {
         margin-bottom: 8px;
     }
 }
-
 
