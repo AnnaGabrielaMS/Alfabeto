@@ -28,7 +28,8 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     max-width: 800px;
-    margin: auto;   
+    margin: auto;  
+
 }
 
 .teclado button {

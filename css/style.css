@@ -20,8 +20,8 @@
     border-radius: 60px;
     margin: 10px;
     border: 3px solid white;
-    box-shadow: 5px 5px 5px rgba(101, 96, 96);
-    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 5px 5px 5px rgb(67, 66, 66);
+    background-color: rgba(9, 138, 37, 0.4);
     color: white;
 }
 
