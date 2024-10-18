@@ -21,12 +21,13 @@
     margin: 10px;
     border: 3px solid white;
     box-shadow: 5px 5px 5px rgb(67, 66, 66);
-    background-color: rgba(9, 138, 37, 0.4);
+    background-color: rgba(207, 207, 207, 0.5);
     color: white;
 }
 
 .botao:hover {
-    background-color: rgb(9, 206, 72);
+    background-color: rgb(58, 195, 101);
+    transform: scale(1.02); /* Efeito de zoom ao passar o mouse sobre o card */
 }
 
 .botao:active {

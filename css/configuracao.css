@@ -26,12 +26,14 @@ p {
     background-color: rgba(207, 207, 207, 0.5);
     padding: 10px;
     border-radius: 20px;
+    box-shadow: 4px 4px 4px rgb(67, 66, 66);
 }
 
 .visualizacao-letras {
     width: 400px;
     display: block;
     margin: 30px auto;
+    box-shadow: 4px 4px 4px rgb(67, 66, 66);
 }
 
 .opcao-audio {
@@ -48,6 +50,7 @@ p {
     height: 80px;
     cursor: pointer;
     background-color: rgba(207, 207, 207, 0.5);
+    box-shadow: 4px 4px 4px rgb(67, 66, 66);
     color: white;
     padding: 5px;
     border: 2px solid white;
