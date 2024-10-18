@@ -21,8 +21,8 @@ p {
     margin: 30px 0px;
 }
 
-.tipo-letra, .tamanho-letra, .visualizacao-letras, .opcao-audio {
-    font-size: 25px;
+.tipo-letra, .tamanho-letra, .visualizacao-letras {
+    font-size: 30px;
     background-color: rgba(207, 207, 207, 0.5);
     padding: 10px;
     border-radius: 20px;
@@ -30,14 +30,8 @@ p {
 }
 
 .visualizacao-letras {
-    width: 400px;
-    display: block;
-    margin: 30px auto;
-    box-shadow: 4px 4px 4px rgb(67, 66, 66);
-}
-
-.opcao-audio {
-    width: 160px;
+    font-size: 35px;
+    width: 500px;
     display: block;
     margin: 30px auto;
 }

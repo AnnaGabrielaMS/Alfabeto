@@ -26,8 +26,10 @@
 }
 
 .botao:hover {
-    background-color: rgb(58, 195, 101);
+    background-color: rgb(255, 255, 255);
     transform: scale(1.02); /* Efeito de zoom ao passar o mouse sobre o card */
+    color: rgb(8, 165, 134);
+    border-color: rgba(51, 62, 44, 0.7);
 }
 
 .botao:active {

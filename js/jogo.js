@@ -17,6 +17,7 @@ let palavraSecreta;
 let palavraAtual;
 const quantidadeDesafios = 5;
 let quantidadeDesafiosJogados = 0;
+let palavrasSorteadas = [];
 
 const contextoSelecionado = localStorage.getItem('contextoSelecionado');
 
@@ -38,14 +39,26 @@ function iniciarDesafio(){
     .then(data => {
         const contextos = data.contextos;
 
-        const palavras = contextos.find(contexto => contexto.nome.toLowerCase() === contextoSelecionado.toLowerCase());
+        const contextoAtual = contextos.find(contexto => contexto.nome.toLowerCase() === contextoSelecionado.toLowerCase());
 
-        const desafioSelecionado = palavras.palavras[Math.floor(Math.random() * palavras.palavras.length)];
-        palavraSecreta = desafioSelecionado.nome;
+        let palavraSorteada;
+
+        do{
+            palavraSorteada = contextoAtual.palavras[Math.floor(Math.random() * contextoAtual.palavras.length)];
+            palavraSecreta = palavraSorteada.nome;
+        } while(palavrasSorteadas.includes(palavraSecreta));
+
+        if (!palavrasSorteadas.includes(palavraSecreta)){
+            palavrasSorteadas.push(palavraSecreta);
+        }
+
         palavraAtual = Array(palavraSecreta.length).fill("_"); 
 
         console.log("Palavra secreta sorteada:", palavraSecreta);
-        document.getElementById('imagem-jogo').src = desafioSelecionado.imagem;
+        document.getElementById('imagem-jogo').src = palavraSorteada.imagem;
+        document.getElementById('imagem-jogo').onerror = function(){
+            this.src = "/img/error.png";
+        }
         
         exibirPalavra(); 
 
@@ -114,12 +127,16 @@ function proximaRodada(){
     quantidadeDesafiosJogados ++;
 
     if (quantidadeDesafiosJogados < quantidadeDesafios){
-        resetarBotoes();
-        iniciarDesafio();
-    }
-    else{
-        alert("Fim da partida!")
-        window.location.href = 'contextos.html'
+        setTimeout(() => {
+            resetarBotoes();
+            iniciarDesafio();
+        }, 1000);
+    } else{
+        setTimeout(() => {
+            alert("Fim da partida!");
+            palavrasSorteadas = [];
+            window.location.href = 'contextos.html';
+        }, 1000);
     }
 }
 
