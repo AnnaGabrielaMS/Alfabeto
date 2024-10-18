@@ -21,3 +21,29 @@ body{
 .fonte-cursiva {
     font-family: 'Maria Lucia', cursive;
 }
+
+.voltar {
+    width: 60px;
+    height: 60px;
+    color: white;
+    background-color: rgba(207, 207, 207, 0.5);
+    border-radius: 40px;
+    box-shadow: 2px 2px 2px rgb(67, 66, 66);
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    cursor: pointer;
+    font-size: 40px;
+    border: none;
+}
+
+.voltar:active{
+    box-shadow: 0 5px rgb(95, 95, 94);
+    transform: translateY(4px);
+}
+
+.voltar:hover{
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.02);
+    color: rgb(9, 156, 75);
+}

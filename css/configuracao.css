@@ -62,6 +62,12 @@ p {
     transform: translateY(4px);
 }
 
+.botao-salvar:hover{
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.02);
+    color:  rgb(8, 165, 134);
+}
+
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
     h2 {
