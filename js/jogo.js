@@ -18,6 +18,7 @@ let palavraAtual;
 const quantidadeDesafios = 5;
 let quantidadeDesafiosJogados = 0;
 let palavrasSorteadas = [];
+let contadorDeErros = 0;
 
 const contextoSelecionado = localStorage.getItem('contextoSelecionado');
 
@@ -83,7 +84,7 @@ function exibirPalavra() {
         }
     } 
 
-    palavraContainer.textContent = palavraAtual.join(" ");
+    palavraContainer.textContent = palavraAtual.map(letra => letra.toUpperCase()).join(" ");
 }
 
 function isVogal(letra) {
@@ -111,6 +112,9 @@ function letraClicada(letra) {
             palavraAtual[i] = palavraSecreta[i];
             acertou = true;
         }
+    } 
+    if(!acertou){
+        contadorDeErros += 1;
     }
     
     exibirPalavra();
@@ -135,7 +139,7 @@ function proximaRodada(){
         setTimeout(() => {
             alert("Fim da partida!");
             palavrasSorteadas = [];
-            window.location.href = 'contextos.html';
+            exibirPontuacao();
         }, 1000);
     }
 }
@@ -149,4 +153,13 @@ function resetarBotoes(){
         botao.style.backgroundColor = '';
     }
     );
+}
+
+function exibirPontuacao(){
+    // Salva o número de erros no localStorage
+    localStorage.setItem('contadorDeErros', contadorDeErros);
+        
+    // Redireciona para a página de pontuação
+    window.location.href = 'pontuacao.html';
+
 }
