@@ -41,6 +41,10 @@
     font-size:40px;
 }
 
+.a4s{
+    top: 20px;
+}
+
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
     .titulo {

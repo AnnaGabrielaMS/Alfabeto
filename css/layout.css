@@ -47,3 +47,33 @@ body{
     transform: scale(1.02);
     color: rgb(9, 156, 75);
 }
+
+.a4s{
+    width: 60px;
+    height: 60px;
+    background-color: rgba(207, 207, 207, 0.5);
+    position: absolute;
+    top: 90px;
+    left: 30px;
+    border-radius: 40px;
+    box-shadow: 2px 2px 2px rgb(67, 66, 66);
+    cursor: pointer;
+}
+
+.a4s:active {
+    box-shadow: 0 5px rgb(95, 95, 94);
+    transform: translateY(4px);
+}
+
+.a4s:hover {
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.02);
+    color: rgb(9, 156, 75);
+}
+
+@media (max-width: 580px) {
+    .voltar, .a4s{
+        width: 45px;
+        height: 45px;
+    }
+}
