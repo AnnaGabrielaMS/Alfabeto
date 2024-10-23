@@ -14,7 +14,7 @@ body{
 
 @font-face {
     font-family: 'Maria Lucia';
-    src: url('../Maria_lucia.ttf') format('truetype');
+    src: url('../fonte/Maria_lucia.ttf') format('truetype');
     font-weight: normal;
 }
 
