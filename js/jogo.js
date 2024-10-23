@@ -137,7 +137,6 @@ function proximaRodada(){
         }, 1000);
     } else{
         setTimeout(() => {
-            alert("Fim da partida!");
             palavrasSorteadas = [];
             exibirPontuacao();
         }, 1000);

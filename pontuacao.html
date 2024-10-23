@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/pontuacao.css">
     <link rel="stylesheet" href="/css/layout.css">
+    <script src="https://kit.fontawesome.com/c141c3c5e6.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
     <title>Pontuação</title>
 </head>
 <body>
@@ -16,15 +18,25 @@
         <img src="" id="imagem-pontuacao" alt="Imagem da pontuação">
         <h3 id="mensagem-resultado"></h3>
     </div>
+
+    <div class="botoes-container">
+        <button class="botao" title="TEMAS" onclick="window.location.href='contextos.html'"><i class="fa-solid fa-house"></i></button>
+        <button class="botao" title="REPETIR" onclick="repetirDesafio()"><i class="fa-solid fa-repeat"></i></button>
+    </div>
+
+
     <script>
-        // Recupera o contador de erros do localStorage
         const contadorDeErros = parseInt(localStorage.getItem('contadorDeErros'), 10);
         
-        // Define a imagem de pontuação baseada no número de erros
         const imagemPontuacao = document.getElementById('imagem-pontuacao');
         const mensagemPontuacao = document.getElementById('mensagem-resultado');
         
         if (contadorDeErros === 0){
+            confetti({
+                particleCount: 200,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
             imagemPontuacao.src = 'img/pontuacao/0erros.png';
             mensagemPontuacao.innerHTML = "PARABÉNS! VOCÊ FOI SENSACIONAL!";
         } else if (contadorDeErros <= 2){
@@ -59,7 +71,18 @@
             mensagemPontuacao.innerHTML = "NÃO SE PREOCUPE, TENTE NOVAMENTE!";
         }
 
+        function repetirDesafio() {
+            const contextoSelecionado = localStorage.getItem('contextoSelecionado');
+    
+             if (contextoSelecionado) {
+                window.location.href = `niveis.html?contexto=${contextoSelecionado}`;
+            } else {
+                window.location.href = 'contextos.html';
+        }
+}
     </script>
-     <script src="/js/jogo.js"></script>
+     
+    <script src="/js/jogo.js"></script>
+
 </body>
 </html>

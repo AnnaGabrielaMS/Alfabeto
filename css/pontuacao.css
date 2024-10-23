@@ -10,7 +10,7 @@ header h2 {
 }
 
 img{
-    margin-top: 70px;
+    margin-top: 90px;
     width: 550px;
     height: auto;
     margin-bottom: 50px;  
@@ -18,4 +18,34 @@ img{
 
 h3{
     font-size: 30px;
+}
+
+.botao {
+    font-size: 40px;
+    margin-top: 120px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    background-color: rgba(207, 207, 207, 0.5);
+    box-shadow: 4px 4px 4px rgb(67, 66, 66);
+    color: white;
+    border: 2px solid white;
+    border-radius: 40px;
+}
+
+.botoes-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.botao:active{
+    box-shadow: 0 5px rgb(95, 95, 94);
+    transform: translateY(4px);
+}
+
+.botao:hover{
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.02);
+    color:  rgb(8, 165, 134);
 }
