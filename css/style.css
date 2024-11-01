@@ -1,6 +1,5 @@
 .opcoes {
     display: grid;
-    font-size: 50px;
     justify-content: center;
     margin-top: 40px;
 }
@@ -10,6 +9,7 @@
     margin: auto;
     max-width: 50%;
     height: auto;
+    margin-top: 25px;
 }
 
 .botao {
@@ -42,7 +42,11 @@
 }
 
 .a4s{
+    position: absolute;
     top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
 }
 
 /* Responsividade para telas menores */
@@ -70,7 +74,7 @@
 
 @media (max-width: 480px) {
     .titulo {
-        padding: 20px;
+        margin-top: 30px;
         max-width: 100%;
     }
 
@@ -79,13 +83,13 @@
     }
     
     .botao {
-        width: 120px;
-        margin: 25px;
-        height: 70px;
+        width: 140px;
+        height: 80px;
+        margin: 10px;
     }
 
     .botao i {
-        font-size: 24px;
+        font-size: 30px;
     }
 
 }

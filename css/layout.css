@@ -9,7 +9,6 @@ body{
     min-height: 100vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
-    padding-top: 50px;
 }
 
 @font-face {
@@ -23,17 +22,14 @@ body{
 }
 
 .voltar {
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     color: white;
     background-color: rgba(207, 207, 207, 0.5);
     border-radius: 40px;
     box-shadow: 2px 2px 2px rgb(67, 66, 66);
-    position: absolute;
-    top: 20px;
-    left: 30px;
     cursor: pointer;
-    font-size: 40px;
+    font-size: 32px;
     border: none;
 }
 
@@ -49,12 +45,9 @@ body{
 }
 
 .a4s{
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     background-color: rgba(207, 207, 207, 0.5);
-    position: absolute;
-    top: 90px;
-    left: 30px;
     border-radius: 40px;
     box-shadow: 2px 2px 2px rgb(67, 66, 66);
     cursor: pointer;

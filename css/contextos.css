@@ -1,6 +1,17 @@
-header h2 {
+header{
+    display: flex;
+    align-items: center;
+    padding: 0.8rem;
+    position: relative;
+    background-color: rgb(46, 97, 42);
+    margin-bottom: 2rem;
+    max-width: 100vw;
+}
+
+h2{
+    font-size: 2rem;
+    flex-grow: 1;
     text-align: center;
-    font-size: 80px;
 }
 
 .flex-container {
@@ -9,6 +20,11 @@ header h2 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+}
+
+.voltar{
+    position: absolute;
+    margin-right: auto;
 }
 
 .box {

@@ -2,6 +2,27 @@ main {
     text-align: center;
 }
 
+.botoes-esquerda{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: rgb(46, 97, 42);
+    margin-bottom: 2rem;
+    max-width: 100vw;
+}
+
+h2{
+    font-size: 2rem;
+    margin-left: -5rem;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -51,7 +72,7 @@ main {
 }
 
 .teclado button:hover {
-    background-color: rgb(19, 236, 87);
+    background-color: rgba(207, 207, 207, 0.5);
     color: white;
 }
 
@@ -63,6 +84,25 @@ tr {
     display: flex;
     justify-content: center;
     margin: 2px;
+}
+
+.alfabeto{
+    width: 45px;
+    height: 45px;
+    background-color: rgba(207, 207, 207, 0.5);
+    border-radius: 40px;
+    box-shadow: 2px 2px 2px rgb(67, 66, 66);
+    cursor: pointer;
+}
+
+.alfabeto:active {
+    box-shadow: 0 5px rgb(95, 95, 94);
+    transform: translateY(4px);
+}
+
+.alfabeto:hover {
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.02);
 }
 
 /* responsividade */
