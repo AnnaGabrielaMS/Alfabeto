@@ -3,7 +3,8 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem;
-    background-color: rgb(46, 97, 42);
+    background-color: rgba(179, 176, 176, 0.5);
+    box-shadow: 3px 3px 3px rgb(67, 66, 66);
     margin-bottom: 2rem;
     max-width: 100vw;
 }

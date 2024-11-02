@@ -24,8 +24,8 @@ body{
 .voltar {
     width: 45px;
     height: 45px;
-    color: white;
-    background-color: rgba(207, 207, 207, 0.5);
+    color: rgb(12, 192, 93);
+    background-color: rgb(255, 255, 255);
     border-radius: 40px;
     box-shadow: 2px 2px 2px rgb(67, 66, 66);
     cursor: pointer;
@@ -39,9 +39,9 @@ body{
 }
 
 .voltar:hover{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(10, 149, 72);
     transform: scale(1.02);
-    color: rgb(9, 156, 75);
+    color: rgb(255, 255, 255);
 }
 
 .a4s{

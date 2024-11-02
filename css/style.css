@@ -9,7 +9,7 @@
     margin: auto;
     max-width: 50%;
     height: auto;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 .botao {
@@ -43,53 +43,49 @@
 
 .a4s{
     position: absolute;
-    top: 20px;
+    top: 25px;
     left: 20px;
     width: 60px;
     height: 60px;
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    .titulo {
-        padding: 20px;
+@media (max-width: 1024px){
+
+    .titulo{
+        margin-top: 80px;
         max-width: 80%;
     }
 
-    .opcoes {
-        margin-top: 50px;
-    }
-    
-    .botao {
-        width: 150px;
-        margin: 30px;
-        height: 90px;
+    .a4s{
+        left: 20px;
+        width: 60px;
+        height: 60px;
     }
 
-    .botao i {
-        font-size: 40px;
+    .botao {
+        width: 200px;
+        height: 120px;
+        margin: 20px;
     }
 
 }
 
 @media (max-width: 480px) {
-    .titulo {
-        margin-top: 30px;
-        max-width: 100%;
+    
+    .titulo{
+        margin-top: 80px;
+        max-width: 90%;
     }
 
-    .opcoes {
-        margin-top: 50px;
+    .a4s{
+        left: 20px;
+        width: 45px;
+        height: 45px;
     }
-    
+
     .botao {
         width: 140px;
-        height: 80px;
-        margin: 10px;
+        height: 90px;
+        margin: 15px;
     }
-
-    .botao i {
-        font-size: 30px;
-    }
-
 }

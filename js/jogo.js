@@ -84,7 +84,7 @@ function exibirPalavra() {
         }
     } 
 
-    palavraContainer.textContent = palavraAtual.map(letra => letra.toUpperCase()).join(" ");
+    palavraContainer.textContent = palavraAtual.join(" ");
 }
 
 function isVogal(letra) {
