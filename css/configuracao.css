@@ -101,10 +101,6 @@ p {
 }
 
 @media (max-width: 480px) {
-    h2 {
-        font-size: 30px;
-    }
-
     p {
         font-size: 24px;
     }
@@ -112,6 +108,16 @@ p {
     .visualizacao-letras {
         width: 80%;
         font-size: 20px;
+    }
+
+    .voltar{
+        width: 35px;
+        height: 35px;
+        font-size: 25px;
+    }
+
+    h2{
+        font-size: 1.6rem;
     }
 
     .botao-salvar {

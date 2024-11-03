@@ -95,10 +95,6 @@ h2{
 }
 
 @media (max-width: 480px) {
-    header h2 {
-        font-size: 30px;
-    }
-
     .box {
         padding: 15px;
     }
@@ -107,6 +103,16 @@ h2{
         width: 80px;
         height: 80px;
         margin-right: 40px;
+    }
+
+    .voltar{
+        width: 35px;
+        height: 35px;
+        font-size: 25px;
+    }
+
+    h2{
+        font-size: 1.6rem;
     }
 
     .box h3 {

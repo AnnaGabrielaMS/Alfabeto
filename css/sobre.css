@@ -13,3 +13,15 @@ h2{
     font-size: 2rem;
     margin-left: -5rem;
 }
+
+@media (max-width: 480px) {
+    .voltar{
+        width: 35px;
+        height: 35px;
+        font-size: 25px;
+    }
+
+    h2{
+        font-size: 1.6rem;
+    }
+}
