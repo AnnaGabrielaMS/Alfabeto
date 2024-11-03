@@ -34,8 +34,8 @@ h2{
 .container img {
     width: 450px;
     height: auto;
-    max-height: 270px;
-    margin-bottom: 20px;
+    max-height: 250px;
+    margin-bottom: 15px;
     object-fit: contain;
 }
 
@@ -58,8 +58,8 @@ h2{
 }
 
 .teclado button {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     margin: 4px;
     font-size: 30px;
     font-weight: bold;
@@ -153,19 +153,34 @@ tr {
 @media (max-width: 480px) {
     .container img {
         width: 325px;
-        margin-top: 70px;
-        margin-bottom: 60px;
+        max-height: 250px;
+        margin-top: 60px;
+        margin-bottom: 50px;
     }
 
     .container p {
-        font-size: 30px;
-        margin-bottom: 48px;
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+
+    .voltar, .a4s, .alfabeto{
+        width: 35px;
+        height: 35px;
+        font-size: 25px;
+    }
+
+    h2{
+        font-size: 1.6rem;
+    }
+
+    .botoes-esquerda{
+        margin-right: 30px;
     }
 
     .teclado button {
         width: 36px;
         height: 44px;
-        font-size: 15px;
+        font-size: 20px;
         margin: 3px;
     }
 }
@@ -186,7 +201,7 @@ tr {
     .teclado button {
         width: 30px;
         height: 38px;
-        font-size: 15px;
+        font-size: 16px;
         margin: 3px;
     }
 

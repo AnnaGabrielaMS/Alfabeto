@@ -64,9 +64,3 @@ body{
     color: rgb(9, 156, 75);
 }
 
-@media (max-width: 580px) {
-    .voltar, .a4s{
-        width: 45px;
-        height: 45px;
-    }
-}
