@@ -1,4 +1,12 @@
 const tecladoEscolhido = localStorage.getItem('tecladoEscolhido');
+
+let palavraSecreta;
+let palavraAtual;
+const quantidadeDesafios = 5;
+let quantidadeDesafiosJogados = 0;
+let palavrasSorteadas = [];
+let contadorDeErros = 0;
+
 if (tecladoEscolhido === 'vogais') {
     document.getElementById('vogais').style.display = 'block';
     document.getElementById('consoantes').style.display = 'none';
@@ -12,13 +20,6 @@ if (tecladoEscolhido === 'vogais') {
     document.getElementById('consoantes').style.display = 'none';
     document.getElementById('alfabeto').style.display = 'block';
 }
-
-let palavraSecreta;
-let palavraAtual;
-const quantidadeDesafios = 5;
-let quantidadeDesafiosJogados = 0;
-let palavrasSorteadas = [];
-let contadorDeErros = 0;
 
 const contextoSelecionado = localStorage.getItem('contextoSelecionado');
 
@@ -134,6 +135,8 @@ function letraClicada(letra) {
 function proximaRodada() {
     quantidadeDesafiosJogados++;
 
+    mostrarFeedback("Parabéns!");
+
     if (quantidadeDesafiosJogados < quantidadeDesafios) {
         setTimeout(() => {
             resetarBotoes();
@@ -156,6 +159,21 @@ function resetarBotoes() {
     });
 }
 
+function mostrarFeedback(mensagem) {
+    const feedbackElement = document.getElementById('feedback');
+    feedbackElement.innerHTML = mensagem;
+
+    const feedbackContainer = feedbackElement.parentElement;
+
+    feedbackContainer.style.display = 'block';
+    
+    // Remove a mensagem após o tempo determinado
+    setTimeout(() => {
+        feedbackContainer.style.display = 'none';
+    }, 3000);
+}
+
+
 function exibirPontuacao() {
     // Salva o número de erros no localStorage
     localStorage.setItem('contadorDeErros', contadorDeErros);
@@ -163,5 +181,4 @@ function exibirPontuacao() {
     // Redireciona para a página de pontuação
     window.location.href = 'pontuacao.html';
 }
-
 
