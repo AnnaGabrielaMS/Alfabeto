@@ -6,6 +6,7 @@ const quantidadeDesafios = 5;
 let quantidadeDesafiosJogados = 0;
 let palavrasSorteadas = [];
 let contadorDeErros = 0;
+let quantidadeDeTentativas = 0;
 
 if (tecladoEscolhido === 'vogais') {
     document.getElementById('vogais').style.display = 'block';
@@ -85,7 +86,7 @@ function exibirPalavra() {
         }
     } 
 
-    palavraContainer.textContent = palavraAtual.join(" ");
+    palavraContainer.textContent = palavraAtual.join(" ").toUpperCase();
 }
 
 function isVogal(letra) {
@@ -108,9 +109,11 @@ function letraClicada(letra) {
             acertou = true;
         }
     } 
-    
+
+    quantidadeDeTentativas++;
+
     if (!acertou) {
-        contadorDeErros += 1;
+        contadorDeErros++;
     }
     
     exibirPalavra();
@@ -175,10 +178,11 @@ function mostrarFeedback(mensagem) {
 
 
 function exibirPontuacao() {
-    // Salva o número de erros no localStorage
-    localStorage.setItem('contadorDeErros', contadorDeErros);
+    const quantidadeDeAcertos = quantidadeDeTentativas - contadorDeErros;
+    const pontuacao = (quantidadeDeAcertos / quantidadeDeTentativas) * 100;
+
+    localStorage.setItem('pontuacao', pontuacao);
         
     // Redireciona para a página de pontuação
     window.location.href = 'pontuacao.html';
 }
-

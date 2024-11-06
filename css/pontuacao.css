@@ -17,7 +17,7 @@ img{
     margin-bottom: 50px;  
 }
 
-h3{
+p{
     font-size: 30px;
 }
 
@@ -60,7 +60,7 @@ h3{
         margin-top: 130px;
     }
 
-    h3{
+    p{
         margin-bottom: 80px;
     }
 
@@ -78,7 +78,7 @@ h3{
         height: 55px;
     }
 
-    h3{
+    p{
         font-size: 1.6rem;
     }
 
