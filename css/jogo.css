@@ -144,6 +144,8 @@ tr {
         font-size: 40px;
         margin: 4px;
     }
+
+  
 }
 @media (max-width: 768px) {
     .container img {
@@ -152,6 +154,11 @@ tr {
         margin-top: 15px;
         margin-bottom: 100px;
         margin-top: 50px;
+    }
+
+    .feedback{
+        top: 50px;
+        right: 60px;
     }
 
     .container p {
@@ -176,8 +183,9 @@ tr {
     }
 
     .container p {
-        font-size: 22px;
+        font-size: 30px;
         margin-bottom: 30px;
+        letter-spacing: 1px;
     }
 
     .voltar, .a4s, .alfabeto{
@@ -185,6 +193,21 @@ tr {
         height: 35px;
         font-size: 25px;
     }
+
+    .feedback{
+        top: 50px;
+        right: 30px;
+    }
+
+    #feedback {
+        font-size: 10px;
+    }
+
+    .container p {
+        font-size: 30px; 
+        margin-bottom: 50px;
+    }
+
 
     h2{
         font-size: 1.6rem;
@@ -211,8 +234,9 @@ tr {
     }
 
     .container p {
-        font-size: 22px;
+        font-size: 24px;
         margin-bottom: 48px;
+        letter-spacing: 1px;
     }
 
     .teclado button {
