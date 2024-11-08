@@ -1,7 +1,7 @@
 .opcoes {
     display: grid;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 25px;
 }
 
 .titulo {
@@ -16,7 +16,6 @@
     width: 150px;
     height: 90px;
     cursor: pointer;
-    padding: 10px;
     border-radius: 60px;
     margin: 10px;
     border: 3px solid white;
@@ -24,21 +23,21 @@
     background-color: rgba(207, 207, 207, 0.5);
     color: white;
 }
-
-.botao:hover {
-    background-color: rgb(255, 255, 255);
-    transform: scale(1.02); /* Efeito de zoom ao passar o mouse sobre o card */
-    color: rgb(8, 165, 134);
-    border-color: rgba(51, 62, 44, 0.7);
-}
-
-.botao:active {
-    box-shadow: 0 5px 5px rgba(146, 240, 173);
-    transform: translateY(4px);
-}
-
 .botao i {
     font-size:40px;
+}
+
+.jogar .botao{
+    background-color: rgb(5, 127, 102);
+}
+
+section{
+    text-align: center;
+}
+
+p{
+    font-size: 1.2rem;
+    margin-bottom: 6px;
 }
 
 .a4s{
@@ -48,6 +47,19 @@
     width: 60px;
     height: 60px;
 }
+
+.botao:hover {
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.02); /* Efeito de zoom ao passar o mouse sobre o card */
+    color: rgb(8, 165, 134);
+    border-color:rgb(5, 92, 74);
+}
+
+.botao:active {
+    box-shadow: 0 5px 5px rgba(146, 240, 173);
+    transform: translateY(4px);
+}
+
 
 @media (max-width: 1024px){
 
