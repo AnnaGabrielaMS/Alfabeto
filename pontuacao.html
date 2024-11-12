@@ -18,76 +18,20 @@
     <div class="resultado">
         <img src="" id="imagem-pontuacao" alt="Imagem da pontuação">
         <p id="mensagem-resultado"></p>
-        <p id="teste"></p>
+        <p id="pontuacao"></p>
+        <p id="jogador-ranking"></p>
     </div>
 
     <div class="botoes-container">
-        <button class="botao" title="TEMAS" onclick="window.location.href='contextos.html'"><i class="fa-solid fa-house"></i></button>
-        <button class="botao" title="REPETIR" onclick="repetirDesafio()"><i class="fa-solid fa-repeat"></i></button>
+        <button class="botao ranking" title="RANKING" onclick="window.location.href='ranking.html'"><i class="fa-solid fa-trophy"></i></button>
+        <div class="botoes-inferiores">
+            <button class="botao" title="TEMAS" onclick="window.location.href='contextos.html'"><i class="fa-solid fa-house"></i></button>
+            <button class="botao" title="REPETIR" onclick="repetirDesafio()"><i class="fa-solid fa-repeat"></i></button>
+        </div>
     </div>
-
-
-    <script>
-        const pontuacao = parseInt(localStorage.getItem('pontuacao'), 10);
-
-        document.getElementById('teste').innerHTML = "VOCÊ OBTEVE " + pontuacao + "% DE ACERTO.";
-        
-        const imagemPontuacao = document.getElementById('imagem-pontuacao');
-        const mensagemPontuacao = document.getElementById('mensagem-resultado');
-        
-        if (pontuacao === 100){
-            confetti({
-                particleCount: 200,
-                spread: 70,
-                origin: { y: 0.6 }
-            });
-            imagemPontuacao.src = 'img/pontuacao/0erros.png';
-            mensagemPontuacao.innerHTML = "PARABÉNS! VOCÊ FOI SENSACIONAL!";
-        } else if (pontuacao >= 90){
-            imagemPontuacao.src = 'img/pontuacao/2erros.png';
-            mensagemPontuacao.innerHTML = "EXCELENTE, QUASE PERFEITO!";
-        } else if (pontuacao >= 80){
-            imagemPontuacao.src = 'img/pontuacao/4erros.png';
-            mensagemPontuacao.innerHTML = "MANDOU MUITO BEM!";
-        } else if (pontuacao >= 70){
-            imagemPontuacao.src = 'img/pontuacao/6erros.png';
-            mensagemPontuacao.innerHTML = "ÓTIMO TRABALHO!";
-        } else if (pontuacao >= 60){
-            imagemPontuacao.src = 'img/pontuacao/8erros.png';
-            mensagemPontuacao.innerHTML = "BOA TENTATIVA, CONTINUE ASSIM!";
-        } else if (pontuacao >= 50){
-            imagemPontuacao.src = 'img/pontuacao/10erros.png';
-            mensagemPontuacao.innerHTML = "VOCÊ ESTÁ INDO BEM!";
-        } else if (pontuacao >= 40){
-            imagemPontuacao.src = 'img/pontuacao/12erros.png';
-            mensagemPontuacao.innerHTML = "CONTINUE TENTANDO!";
-        } else if (pontuacao >= 30){
-            imagemPontuacao.src = 'img/pontuacao/14erros.png';
-            mensagemPontuacao.innerHTML = "NÃO DESISTA, VOCÊ CONSEGUE!";
-        } else if (pontuacao >= 20){
-            imagemPontuacao.src = 'img/pontuacao/16erros.png';
-            mensagemPontuacao.innerHTML = "PERSISTÊNCIA É A CHAVE!";
-        } else if (pontuacao >= 10){
-            imagemPontuacao.src = 'img/pontuacao/18erros.png';
-            mensagemPontuacao.innerHTML = "CADA ERRO É UM PASSO PARA O ACERTO!";
-        } else {
-            imagemPontuacao.src = 'img/pontuacao/20erros.png';
-            mensagemPontuacao.innerHTML = "NÃO FOI DESSA VEZ, TENTE NOVAMENTE!";
-        }
-
-        function repetirDesafio() {
-            const contextoSelecionado = localStorage.getItem('contextoSelecionado');
-            const tecladoEscolhido = localStorage.getItem('tecladoEscolhido');
-    
-             if (contextoSelecionado) {
-                window.location.href = `jogo.html?contexto=${contextoSelecionado}&niveis=${tecladoEscolhido}`;
-            } else {
-                window.location.href = 'contextos.html';
-        }
-}
-    </script>
      
     <script src="js/jogo.js"></script>
+    <script src="js/pontuacao.js"></script>
 
 </body>
 </html>

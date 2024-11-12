@@ -1,8 +1,10 @@
 function atualizarRankingNaPagina(ranking) {
-    const tabela = document.querySelector(".tabela");
+
+    const QUANTIDADE_COLOCACOES_RANKING = 5;
+    const TABELA = document.querySelector(".tabela");
 
     // Limpa o conteúdo da tabela e adiciona o cabeçalho
-    tabela.innerHTML = `
+    TABELA.innerHTML = `
         <tr>
             <th>COLOCAÇÃO</th>
             <th>NOME</th>
@@ -11,15 +13,21 @@ function atualizarRankingNaPagina(ranking) {
     `;
 
     // Preenche a tabela com os dados do ranking
-    for (let i = 0; i < 5; i++) {
-        const jogador = ranking[i] || { nome: "-", pontuacao: "-" }; //caso não tenha os 5 jogadores
-        const linha = document.createElement("tr");
-        linha.innerHTML = `
+    for (let i = 0; i < QUANTIDADE_COLOCACOES_RANKING; i++) {
+        const JOGADOR = ranking[i] || { nome: "-", pontuacao: "-" }; //caso não tenha os 5 jogadores
+        const LINHA = document.createElement("tr");
+        const NOME = JOGADOR.nome;
+
+        if (JOGADOR.pontuacao !== "-"){
+            pontuacao = Math.round(JOGADOR.pontuacao);
+        }
+
+        LINHA.innerHTML = `
             <td>${i + 1}°</td>
-            <td>${jogador.nome}</td>
-            <td>${jogador.pontuacao}</td>
+            <td>${JOGADOR.nome}</td>
+            <td>${JOGADOR.pontuacao}</td>
         `;
-        tabela.appendChild(linha);
+        TABELA.appendChild(LINHA);
     }
 }
 

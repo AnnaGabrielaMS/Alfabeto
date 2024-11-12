@@ -21,9 +21,16 @@ p{
     font-size: 30px;
 }
 
+.ranking {
+    margin-top: 40px;
+}
+
+.botoes-container{
+    margin-top: 40px;
+}
+
 .botao {
     font-size: 40px;
-    margin-top: 120px;
     width: 80px;
     height: 80px;
     cursor: pointer;
@@ -34,10 +41,10 @@ p{
     border-radius: 40px;
 }
 
-.botoes-container {
+.botoes-inferiores {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 50px;
 }
 
 .botao:active{
@@ -61,14 +68,18 @@ p{
     }
 
     p{
-        margin-bottom: 80px;
+        margin-bottom: 50px;
+    }
+
+    .botoes-container{
+        margin-top: 80px;
     }
 
 }
 
 @media (max-width: 480px) {
     header h2{
-        margin-top: 80px;
+        margin-top: 70px;
         font-size: 2.5rem;
     }
 
@@ -83,8 +94,11 @@ p{
         margin-bottom: 30px;
     }
 
+    .botoes-container{
+        margin-top: 15px;
+    }
+
     .botao{
-        margin-top: 70px;
         width: 60px;
         height: 60px;
         font-size: 1.8rem;
