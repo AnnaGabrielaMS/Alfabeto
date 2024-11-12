@@ -1,33 +1,30 @@
-const tecladoEscolhido = localStorage.getItem('tecladoEscolhido');
-
+const TECLADO_ESCOLHIDO = localStorage.getItem('tecladoEscolhido');
+const QUANTIDADE_DESAFIOS = 5;
 let palavraSecreta;
 let palavraAtual;
-const quantidadeDesafios = 5;
 let quantidadeDesafiosJogados = 0;
 let palavrasSorteadas = [];
 let contadorDeErros = 0;
 let quantidadeDeTentativas = 0;
+const CONTEXTO_SELECIONADO = localStorage.getItem('contextoSelecionado');
 
-if (tecladoEscolhido === 'vogais') {
-    document.getElementById('vogais').style.display = 'block';
-    document.getElementById('consoantes').style.display = 'none';
-    document.getElementById('alfabeto').style.display = 'none';
-} else if (tecladoEscolhido === 'consoantes') {
-    document.getElementById('vogais').style.display = 'none';
-    document.getElementById('consoantes').style.display = 'block';
-    document.getElementById('alfabeto').style.display = 'none';
-} else {
-    document.getElementById('vogais').style.display = 'none';
-    document.getElementById('consoantes').style.display = 'none';
-    document.getElementById('alfabeto').style.display = 'block';
-}
-
-const contextoSelecionado = localStorage.getItem('contextoSelecionado');
-
-if (!contextoSelecionado) {
+if (!CONTEXTO_SELECIONADO) {
     alert("Nenhum contexto foi selecionado");
     window.location.href = 'contextos.html';
 } else {
+    if (TECLADO_ESCOLHIDO === 'vogais') {
+        document.getElementById('vogais').style.display = 'block';
+        document.getElementById('consoantes').style.display = 'none';
+        document.getElementById('alfabeto').style.display = 'none';
+    } else if (TECLADO_ESCOLHIDO === 'consoantes') {
+        document.getElementById('vogais').style.display = 'none';
+        document.getElementById('consoantes').style.display = 'block';
+        document.getElementById('alfabeto').style.display = 'none';
+    } else {
+        document.getElementById('vogais').style.display = 'none';
+        document.getElementById('consoantes').style.display = 'none';
+        document.getElementById('alfabeto').style.display = 'block';
+    }
     iniciarDesafio();
 }
 
@@ -40,14 +37,14 @@ function iniciarDesafio() {
             return response.json();
         })
         .then(data => {
-            const contextos = data.contextos;
-            const contextoAtual = contextos.find(contexto => contexto.nome.toLowerCase() === contextoSelecionado.toLowerCase());
+            const CONTEXTOS = data.contextos;
+            const CONTEXTO_ATUAL = CONTEXTOS.find(contexto => contexto.nome.toLowerCase() === CONTEXTO_SELECIONADO.toLowerCase());
             let palavraSorteada;
 
-            document.getElementById('tema').innerHTML = contextoAtual.nome.toUpperCase();
+            document.getElementById('tema').innerHTML = CONTEXTO_ATUAL.nome.toUpperCase();
 
             do {
-                palavraSorteada = contextoAtual.palavras[Math.floor(Math.random() * contextoAtual.palavras.length)];
+                palavraSorteada = CONTEXTO_ATUAL.palavras[Math.floor(Math.random() * CONTEXTO_ATUAL.palavras.length)];
                 palavraSecreta = palavraSorteada.nome;
             } while (palavrasSorteadas.includes(palavraSecreta));
 
@@ -70,15 +67,15 @@ function iniciarDesafio() {
 }
 
 function exibirPalavra() {
-    const palavraContainer = document.getElementById('palavra');
+    const PALAVRA_CONTAINER = document.getElementById('palavra');
 
-    if (tecladoEscolhido === 'vogais') {
+    if (TECLADO_ESCOLHIDO === 'vogais') {
         for (let i = 0; i < palavraSecreta.length; i++) {
             if (isConsoante(palavraSecreta[i].toUpperCase())) {
                 palavraAtual[i] = palavraSecreta[i];
             }
         }
-    } else if (tecladoEscolhido === 'consoantes') {
+    } else if (TECLADO_ESCOLHIDO === 'consoantes') {
         for (let i = 0; i < palavraSecreta.length; i++) {
             if (isVogal(palavraSecreta[i].toUpperCase())) {
                 palavraAtual[i] = palavraSecreta[i];
@@ -86,12 +83,12 @@ function exibirPalavra() {
         }
     } 
 
-    palavraContainer.textContent = palavraAtual.join(" ").toUpperCase();
+    PALAVRA_CONTAINER.textContent = palavraAtual.join(" ").toUpperCase();
 }
 
 function isVogal(letra) {
-    const letraNormalizada = letra.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
-    return ["A", "E", "I", "O", "U"].includes(letraNormalizada);
+    const LETRA_NORMALIZADA = letra.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
+    return ["A", "E", "I", "O", "U"].includes(LETRA_NORMALIZADA);
 }
 
 function isConsoante(letra) {
@@ -118,8 +115,8 @@ function letraClicada(letra) {
     
     exibirPalavra();
     
-    const botoes = document.querySelectorAll(`button[onclick="letraClicada('${letra}')"]`);
-    botoes.forEach(botao => {
+    const BOTOES = document.querySelectorAll(`button[onclick="letraClicada('${letra}')"]`);
+    BOTOES.forEach(botao => {
         if (acertou) {
             botao.style.backgroundColor = 'green';  // Define a cor verde para acertos
             botao.style.color = 'white';
@@ -140,7 +137,7 @@ function proximaRodada() {
 
     mostrarFeedback("Parabéns!");
 
-    if (quantidadeDesafiosJogados < quantidadeDesafios) {
+    if (quantidadeDesafiosJogados < QUANTIDADE_DESAFIOS) {
         setTimeout(() => {
             resetarBotoes();
             iniciarDesafio();
@@ -148,41 +145,79 @@ function proximaRodada() {
     } else {
         setTimeout(() => {
             palavrasSorteadas = [];
-            exibirPontuacao();
+            finalizarPartida();
         }, 1000);
     }
 }
 
 function resetarBotoes() {
-    const botoes = document.querySelectorAll('button[onclick^="letraClicada"]');
-    botoes.forEach(botao => {
+    const BOTOES = document.querySelectorAll('button[onclick^="letraClicada"]');
+    BOTOES.forEach(botao => {
         botao.disabled = false;
         botao.style.color = '';
         botao.style.backgroundColor = '';
     });
 }
 
+function finalizarPartida() {
+    exibirPontuacao();
+    const PONTUACAO = parseInt(localStorage.getItem('pontuacao'), 10);
+
+    document.getElementById('pontuacao-jogador').innerHTML = "Sua pontuação: " + PONTUACAO;
+
+    const NOME_FORM = document.querySelector('.recuperar-nome');
+    NOME_FORM.style.display = 'block';  // Mostra a caixa de nome
+
+    // Adiciona um listener para o envio do nome
+    const FORM = document.querySelector('.recuperar-nome form');
+    FORM.addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o comportamento padrão de recarregar a página
+
+        const NOME_JOGADOR = document.getElementById('nomeJogador').value;
+
+        if (NOME_JOGADOR) {
+            let ranking = JSON.parse(localStorage.getItem("ranking")) || [];
+
+            ranking.push({ nome: NOME_JOGADOR, pontuacao: PONTUACAO });
+            ranking.sort((a, b) => b.pontuacao - a.pontuacao);
+
+            // Mantém apenas o Top 5
+            ranking = ranking.slice(0, 5);
+
+            localStorage.setItem("ranking", JSON.stringify(ranking));
+
+            NOME_FORM.style.display = 'none';
+        
+            setTimeout(() => {
+                // Redireciona para a página de pontuação
+                window.location.href = 'pontuacao.html';
+            }, 2000);
+        } else {
+            alert("Por favor, insira um nome antes de confirmar.");
+        }
+    });
+}
+
+
 function mostrarFeedback(mensagem) {
-    const feedbackElement = document.getElementById('feedback');
-    feedbackElement.innerHTML = mensagem;
+    const FEEDBACK_ELEMENT = document.getElementById('feedback');
+    FEEDBACK_ELEMENT.innerHTML = mensagem;
 
-    const feedbackContainer = feedbackElement.parentElement;
+    const FEEDBACK_CONTAINER = FEEDBACK_ELEMENT.parentElement;
 
-    feedbackContainer.style.display = 'block';
+    FEEDBACK_CONTAINER.style.display = 'block';
     
     // Remove a mensagem após o tempo determinado
     setTimeout(() => {
-        feedbackContainer.style.display = 'none';
+        FEEDBACK_CONTAINER.style.display = 'none';
     }, 3000);
 }
 
 
 function exibirPontuacao() {
-    const quantidadeDeAcertos = quantidadeDeTentativas - contadorDeErros;
-    const pontuacao = (quantidadeDeAcertos / quantidadeDeTentativas) * 100;
+    const QUATIDADE_ACERTOS = quantidadeDeTentativas - contadorDeErros;
+    let pontuacao = (QUATIDADE_ACERTOS / quantidadeDeTentativas) * 100;
+    parseFloat(pontuacao.toFixed(2));
 
     localStorage.setItem('pontuacao', pontuacao);
-        
-    // Redireciona para a página de pontuação
-    window.location.href = 'pontuacao.html';
 }

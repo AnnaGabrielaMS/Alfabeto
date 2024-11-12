@@ -78,7 +78,7 @@ p {
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
     h2 {
-        font-size: 35px;
+        font-size: 2rem;
     }
 
     p {
