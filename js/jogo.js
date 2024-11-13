@@ -179,7 +179,7 @@ function finalizarPartida() {
             let ranking = JSON.parse(localStorage.getItem("ranking")) || [];
 
             ranking.push({ nome: NOME_JOGADOR, pontuacao: PONTUACAO });
-            ranking.sort((a, b) => b.pontuacao - a.pontuacao);
+            ranking.sort((a, b) => b.pontuacao - a.pontuacao);        
 
             localStorage.setItem("ranking", JSON.stringify(ranking));
 
