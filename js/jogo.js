@@ -132,7 +132,14 @@ function letraClicada(letra) {
     }
 }
 
+function desabilitarBotoes() {
+    const BOTOES = document.querySelectorAll('button[onclick^="letraClicada"]');
+    BOTOES.forEach(botao => {
+        botao.disabled = true;})
+}
+
 function proximaRodada() {
+    desabilitarBotoes();
     quantidadeDesafiosJogados++;
 
     mostrarFeedback("Parabéns!");
@@ -160,6 +167,7 @@ function resetarBotoes() {
 }
 
 function finalizarPartida() {
+    desabilitarBotoes();
     exibirPontuacao();
     const PONTUACAO = parseInt(localStorage.getItem('pontuacao'), 10);
 

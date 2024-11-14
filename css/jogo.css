@@ -134,11 +134,11 @@ tr {
     padding: 1rem 2rem;
     font-weight: 600;
     position: absolute;
-    top: 40%;
-    left: 37%;
+    top: 50%;       /* Centraliza verticalmente */
+    left: 50%;      /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta para o centro exato */
     display: none;
 }
-
 .recuperar-nome input {
     margin: 10px 0px 15px;
     height: 25px;
@@ -184,13 +184,23 @@ tr {
     }
 
     .teclado button {
-        width: 78px;
+        width: 78px; 
         height: 86px;
         font-size: 40px;
         margin: 4px;
-        font-size: 50px;
+        font-size: 60px;
     }
 
+    .recuperar-nome {
+        width: 400px;
+        height: 220px;
+        font-size: 20px;
+    }
+
+    .recuperar-nome input {
+        width: 330px;
+        margin-bottom: 30px;
+    }
   
 }
 @media (max-width: 768px) {
@@ -215,13 +225,12 @@ tr {
     .teclado button {
         width: 70px;
         height: 75px;
-        font-size: 40px;
         margin: 4px;
-        font-size: 70px;
+        font-size: 50px;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 700px) {
     .container img {
         width: 325px;
         max-height: 250px;
@@ -267,10 +276,21 @@ tr {
     .teclado button {
         width: 36px;
         height: 44px;
-        font-size: 20px;
         margin: 3px;
         font-size: 30px;
     }
+
+    .recuperar-nome {
+        width: 300px;
+        height: 180px;
+        font-size: 16px;
+    }
+
+    .recuperar-nome input {
+        width: 220px;
+        margin-bottom: 20px;
+    }
+
 }
 
 @media (max-width: 380px) {
@@ -290,7 +310,6 @@ tr {
     .teclado button {
         width: 30px;
         height: 38px;
-        font-size: 16px;
         margin: 3px;
         font-size: 25px;
     }

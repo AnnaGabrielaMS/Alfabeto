@@ -52,7 +52,7 @@ p{
 .botao:hover {
     background-color: rgb(255, 255, 255);
     transform: scale(1.02); /* Efeito de zoom ao passar o mouse sobre o card */
-    color: rgb(8, 165, 134);
+    color: rgb(5, 127, 102);
     border-color:rgb(5, 92, 74);
 }
 
@@ -81,9 +81,15 @@ p{
         margin: 20px;
     }
 
+    p{
+        font-size: 1.5rem;
+        margin-bottom: 6px;
+        font-weight: bold;
+    }
+
 }
 
-@media (max-width: 480px) {
+@media (max-width: 700px) {
     
     .titulo{
         margin-top: 80px;

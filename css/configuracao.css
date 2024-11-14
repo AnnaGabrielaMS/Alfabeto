@@ -35,7 +35,7 @@ p {
 }
 
 .tipo-letra, .tamanho-letra, .visualizacao-letras {
-    font-size: 30px;
+    font-size: 32px;
     background-color: rgba(207, 207, 207, 0.5);
     padding: 10px;
     border-radius: 20px;
@@ -43,7 +43,7 @@ p {
 }
 
 .visualizacao-letras {
-    font-size: 35px;
+    font-size: 38px;
     width: 500px;
     display: block;
     margin: 30px auto;
@@ -75,39 +75,19 @@ p {
     color:  rgb(8, 165, 134);
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    h2 {
-        font-size: 2rem;
-    }
 
-    p {
-        font-size: 30px;
-    }
-
-    .visualizacao-letras {
-        width: 300px;
-        font-size: 25px;
-    }
-
-    .botao-salvar {
-        width: 70px;
-        height: 70px;
-    }
-
-    .tipo-letra, .tamanho-letra, .opcao-audio {
-        font-size: 22px;
-    }
-}
-
-@media (max-width: 480px) {
+@media (max-width: 700px) {
     p {
         font-size: 24px;
     }
 
     .visualizacao-letras {
         width: 80%;
-        font-size: 20px;
+        font-size: 28px;
+    }
+
+    .escolha-tema{
+        gap: 30px;
     }
 
     .voltar{
@@ -123,10 +103,11 @@ p {
     .botao-salvar {
         width: 60px;
         height: 60px;
+        font-size: 2rem;
     }
 
-    .tipo-letra, .tamanho-letra, .opcao-audio {
-        font-size: 20px;
+    .tipo-letra, .tamanho-letra{
+        font-size: 25px;
         padding: 8px;
     }
 }
