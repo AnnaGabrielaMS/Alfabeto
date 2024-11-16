@@ -19,6 +19,7 @@ img{
 
 p{
     font-size: 30px;
+    margin: 0 4px;
 }
 
 .ranking {
@@ -26,7 +27,7 @@ p{
 }
 
 .botoes-container{
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .botao {
@@ -90,7 +91,7 @@ p{
     }
 
     p{
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         margin-bottom: 25px;
     }
 

@@ -12,6 +12,12 @@ if (!CONTEXTO_SELECIONADO) {
     alert("Nenhum contexto foi selecionado");
     window.location.href = 'contextos.html';
 } else {
+    iniciarDesafio();
+}
+
+
+function escolhaDoTeclado(){
+    console.log('Função chamada:', 'escolhaDoTeclado');
     if (TECLADO_ESCOLHIDO === 'vogais') {
         document.getElementById('vogais').style.display = 'block';
         document.getElementById('consoantes').style.display = 'none';
@@ -25,10 +31,10 @@ if (!CONTEXTO_SELECIONADO) {
         document.getElementById('consoantes').style.display = 'none';
         document.getElementById('alfabeto').style.display = 'block';
     }
-    iniciarDesafio();
 }
 
 function iniciarDesafio() {
+    escolhaDoTeclado();
     fetch('repositorio-palavras/palavras.json')
         .then(response => {
             if (!response.ok) {
@@ -182,12 +188,16 @@ function finalizarPartida() {
         event.preventDefault(); // Impede o comportamento padrão de recarregar a página
 
         const NOME_JOGADOR = document.getElementById('nomeJogador').value;
+        localStorage.setItem('nome-jogador', NOME_JOGADOR);
 
         if (NOME_JOGADOR) {
             let ranking = JSON.parse(localStorage.getItem("ranking")) || [];
 
             ranking.push({ nome: NOME_JOGADOR, pontuacao: PONTUACAO });
             ranking.sort((a, b) => b.pontuacao - a.pontuacao);        
+
+            //mantém apenas o top 5
+            ranking = ranking.slice(0, 5);
 
             localStorage.setItem("ranking", JSON.stringify(ranking));
 

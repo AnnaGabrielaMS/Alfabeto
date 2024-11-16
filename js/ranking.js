@@ -36,3 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const ranking = JSON.parse(localStorage.getItem("ranking")) || [];
     atualizarRankingNaPagina(ranking);
 });
+
+function zerarRanking() {
+    localStorage.removeItem("ranking");
+    atualizarRankingNaPagina([]); // Atualiza a exibição da tabela com o ranking vazio
+}
