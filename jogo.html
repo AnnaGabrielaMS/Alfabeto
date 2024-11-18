@@ -13,11 +13,14 @@
 <body>
     <header>
         <div class="botoes-esquerda">
-            <button class="voltar" title="VOLTAR" onclick="window.location.href='niveis.html'"><i class="fa-solid fa-arrow-left"></i></button>
-            <a href="index.html" title="VOLTAR PARA O INÍCIO"><img src="img/beto_logo.png" alt="Logo AlfaBeto" class="alfabeto"></a>
+            <button class="voltar hamburguer-botoes" title="VOLTAR" onclick="window.location.href='niveis.html'"><i class="fa-solid fa-arrow-left"></i></button>
+            <a href="index.html" class="hamburguer-botoes alfabeto-link" title="VOLTAR PARA O INÍCIO"><img src="img/beto_logo.png" alt="Logo AlfaBeto" class="alfabeto"></a>
         </div>
         <h2 id="tema"></h2>
-        <a href="https://apps4society.dcx.ufpb.br" title="Apps4Society" target="_blank"><img src="img/logotipofinal.png" class="a4s" alt="apps4society"></a>
+        <a class="hamburguer-botoes a4s-link" href="https://apps4society.dcx.ufpb.br" title="Apps4Society" target="_blank"><img src="img/logotipofinal.png" class="a4s" alt="apps4society"></a>
+        <div class="hamburguer">
+            <i class="fa-solid fa-bars" onclick="exibirOcultarBotoes()"></i>
+        </div>
     </header>
     <main>
         <div class="flex-container">

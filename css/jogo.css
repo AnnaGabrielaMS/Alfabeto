@@ -159,6 +159,14 @@ tr {
     color: #fff;
 }
 
+.hamburguer {
+    display: none;
+}
+
+.hamburguer i{
+    font-size: 1.5rem;
+}
+
 /* responsividade */
 @media (max-width: 1024px) {
     .container img {
@@ -235,7 +243,7 @@ tr {
         letter-spacing: 1px;
     }
 
-    .voltar, .a4s, .alfabeto{
+    .voltar, .a4s{
         width: 35px;
         height: 35px;
         font-size: 25px;
@@ -258,6 +266,7 @@ tr {
 
     h2{
         font-size: 1.6rem;
+        margin: auto;
     }
 
     .botoes-esquerda{
@@ -280,6 +289,31 @@ tr {
     .recuperar-nome input {
         width: 220px;
         margin-bottom: 20px;
+    }
+
+    .hamburguer {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburguer-botoes{
+        display: none;
+        position: absolute;
+        right: 10px;
+    }
+
+    .alfabeto-link{
+        top: 50px;
+        background-color: rgba(179, 176, 176, 0.3);
+        border-radius: 5px;
+    }
+
+    .a4s-link{
+        top: 100px;
+    }
+
+    .voltar{
+        top: 150px;
     }
 
 }

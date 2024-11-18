@@ -235,3 +235,15 @@ function exibirPontuacao() {
 
     localStorage.setItem('pontuacao', pontuacao);
 }
+
+function exibirOcultarBotoes(){
+    const BOTOES = document.querySelectorAll('.hamburguer-botoes');
+    
+    BOTOES.forEach(botao => {
+        if (botao.style.display == "block"){
+            botao.style.display = "none";
+        } else {
+            botao.style.display = "block";
+        }
+    });
+}
