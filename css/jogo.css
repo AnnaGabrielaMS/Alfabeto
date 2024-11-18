@@ -21,7 +21,7 @@ header{
 
 h2{
     font-size: 2rem;
-    margin-left: -5rem;
+    margin-left: -11rem;
 }
 
 .container {
@@ -105,22 +105,13 @@ tr {
 
 
 .alfabeto{
-    width: 45px;
-    height: 45px;
-    background-color: rgba(207, 207, 207, 0.5);
-    border-radius: 40px;
-    box-shadow: 2px 2px 2px rgb(67, 66, 66);
+    width: 150px;
+    height: 35px;
     cursor: pointer;
 }
 
-.alfabeto:active {
-    box-shadow: 0 5px rgb(95, 95, 94);
-    transform: translateY(4px);
-}
-
 .alfabeto:hover {
-    background-color: rgb(255, 255, 255);
-    transform: scale(1.02);
+    transform: scale(1.08);
 }
 
 .recuperar-nome {
