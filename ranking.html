@@ -49,7 +49,17 @@
                 </tr>
             </table>
         </div>
-        <button class="zerar-ranking" onclick="zerarRanking()">Zerar Ranking</button>
+        <button class="zerar-ranking" onclick="mostrarConfirmacaoZerarRanking()">Zerar Ranking</button>
+
+        <div class="confirmacao-zerar-ranking">
+            <p>Tem certeza que deseja zerar o ranking?</p>
+            <button class="confirmar" onclick="zerarRanking()">CONFIRMAR</button>
+            <button class="cancelar" onclick="esconderConfirmacaoZerarRanking()">CANCELAR</button>
+        </div>
+
+        <div class="mensagem-sucesso">
+            <p id="sucesso"></p>
+        </div>
     </main>
 
     <script src="js/ranking.js"></script>

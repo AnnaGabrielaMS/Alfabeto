@@ -57,6 +57,59 @@ td {
     color:  rgb(8, 165, 134);
 }
 
+.mensagem-sucesso {
+    position: fixed;
+    top: 30px;
+    right: 25px;
+    padding: 15px;
+    background-color: #2b910f;
+    color: white;
+    border-radius: 10px;
+    display: none;
+    box-shadow: 0px 2px 2px rgba(67, 66, 66);
+}
+
+.mensagem-sucesso p {
+    font-size: .8rem;
+}
+
+.confirmacao-zerar-ranking {
+    width: 300px;
+    text-align: center;
+    background-color: rgb(5, 127, 102);
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 1rem;
+    font-weight: 600;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.confirmacao-zerar-ranking button {
+    margin: 1rem 1rem;
+    border: 1px solid;
+    padding: .50rem;
+    cursor: pointer;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.confirmar {
+    background-color: rgb(43, 145, 15);
+}
+
+.cancelar {
+    background-color: rgb(209, 11, 11);
+}
+
+.confirmar:hover, .cancelar:hover {
+    transform: scale(1.1);
+}
+
 @media (max-width: 770px) {
     .tabela {
         font-size: 30px;
@@ -66,13 +119,35 @@ td {
     }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 700px) {
     h2 {
         font-size: 40px;
     }
     .tabela {
         font-size: 22px;
     }    
+
+    .confirmacao-zerar-ranking {
+        padding: 0.60rem;
+        font-size: 0.6rem;
+        width: 230px;
+    }
+    
+    .confirmacao-zerar-ranking button {
+        margin: 0.70rem 0.50rem;
+        font-size: 0.6rem;
+        padding: .40rem;
+    }
+
+    .mensagem-sucesso {
+        top: 45px;
+        right: 15px;
+        padding: 12px;
+    }
+    
+    .mensagem-sucesso p {
+        font-size: .6rem;
+    }
     
 }
 

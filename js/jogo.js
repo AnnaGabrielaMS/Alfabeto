@@ -247,3 +247,35 @@ function exibirOcultarBotoes(){
         }
     });
 }
+
+let urlDestino;
+
+function confirmarSaida(texto) {
+    const divConfirmacao = document.querySelector('.confirmar-acao'); 
+    const paragrafo = document.getElementById('confirmar-saida');
+    if (divConfirmacao.style.display === "none") {
+        divConfirmacao.style.display = "block";
+        paragrafo.innerHTML = texto;
+    } 
+}
+
+function mostrarConfirmacaoSairTela(texto, url) {
+    const CONFIRMAR = document.querySelector('.confirmacao-sair-tela');
+    CONFIRMAR.style.display = "block";
+    
+    const PARAGRAFO = document.getElementById('texto-confirmacao');
+    PARAGRAFO.innerHTML = texto;
+    
+    urlDestino = url;
+}
+
+function esconderConfirmacaoSairTela() {
+    const CONFIRMAR = document.querySelector('.confirmacao-sair-tela');
+    CONFIRMAR.style.display = "none"; 
+}
+
+function redirecionar() {
+    if (urlDestino) {
+        window.location.href = urlDestino;
+    }
+}
