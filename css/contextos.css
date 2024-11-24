@@ -1,20 +1,3 @@
-header{
-    display: flex;
-    align-items: center;
-    padding: 0.8rem;
-    position: relative;
-    background-color: rgba(179, 176, 176, 0.5);
-    box-shadow: 3px 3px 3px rgb(67, 66, 66);
-    margin-bottom: 2rem;
-    max-width: 100vw;
-}
-
-h2{
-    font-size: 2rem;
-    flex-grow: 1;
-    text-align: center;
-}
-
 .flex-container {
     margin: 50px auto;
     display: flex;
@@ -109,10 +92,6 @@ h2{
         width: 35px;
         height: 35px;
         font-size: 25px;
-    }
-
-    h2{
-        font-size: 1.6rem;
     }
 
     .box h3 {

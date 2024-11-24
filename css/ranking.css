@@ -1,20 +1,3 @@
-header{
-    display: flex;
-    align-items: center;
-    padding: 0.8rem;
-    position: relative;
-    background-color: rgba(179, 176, 176, 0.5);
-    box-shadow: 3px 3px 3px rgb(67, 66, 66);
-    margin-bottom: 2rem;
-    max-width: 100vw;
-}
-
-h2{
-    font-size: 2rem;
-    flex-grow: 1;
-    text-align: center;
-}
-
 .tabela {
     margin-top: 20px;
     width: 100%;
@@ -41,7 +24,7 @@ td {
 .zerar-ranking{
     font-size: 1rem;
     font-weight: 600;
-    margin-top: 50px;
+    margin-top: 30px;
     cursor: pointer;
     background-color:rgba(179, 176, 176, 0.5);
     box-shadow: 4px 4px 4px rgb(67, 66, 66);
@@ -110,19 +93,23 @@ td {
     transform: scale(1.1);
 }
 
+
+@media (max-width: 1024px) {
+    td{
+        padding-bottom: 120px;
+    }
+}
 @media (max-width: 770px) {
     .tabela {
         font-size: 30px;
     }
-    h2 {
-        font-size: 2rem;
+
+    td{
+        padding-bottom: 70px;
     }
 }
 
 @media (max-width: 700px) {
-    h2 {
-        font-size: 40px;
-    }
     .tabela {
         font-size: 22px;
     }    
@@ -148,13 +135,9 @@ td {
     .mensagem-sucesso p {
         font-size: .6rem;
     }
-    
 }
 
-@media (max-width: 500px) {
-    h2 {
-        font-size: 1.6rem;
-    }
+@media (max-width: 540px) {
     .tabela {
         font-size: 1rem;
     }    
@@ -166,26 +149,19 @@ td {
     .zerar-ranking{
         font-size: .7rem;
     }
+
+    td{
+        padding-bottom: 50px;
+    }
     
 }
 
-@media (max-width: 400px) {
-    h2 {
-        font-size: 1.5rem;
+@media (max-width: 380px) {
+    .tabela {
+        font-size: .8rem;
+    }    
+    td{
+        padding-bottom: 45px;
     }
-    .tabela {
-        font-size: .8rem;
-    }    
 }
 
-@media (max-width: 360px) {
-    .tabela {
-        font-size: .8rem;
-    }    
-}
-
-@media (max-width: 345px) {
-    h2 {
-        font-size: 1.3rem;
-    }    
-}

@@ -37,7 +37,7 @@ section{
 
 p{
     font-size: 1.2rem;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     font-weight: bold;
 }
 
@@ -66,7 +66,8 @@ p{
 
     .titulo{
         margin-top: 80px;
-        max-width: 80%;
+        margin-bottom: 40px;
+        max-width: 75%;
     }
 
     .a4s{
@@ -76,15 +77,17 @@ p{
     }
 
     .botao {
-        width: 200px;
+        width: 210px;
         height: 120px;
         margin: 20px;
     }
 
     p{
-        font-size: 1.5rem;
-        margin-bottom: 6px;
-        font-weight: bold;
+        font-size: 2rem;
+    }
+
+    .botao i{
+        font-size: 3.5rem;
     }
 
 }
@@ -94,6 +97,7 @@ p{
     .titulo{
         margin-top: 80px;
         max-width: 90%;
+        margin-bottom: 5px;
     }
 
     .a4s{
@@ -103,8 +107,16 @@ p{
     }
 
     .botao {
-        width: 140px;
-        height: 90px;
+        width: 130px;
+        height: 80px;
         margin: 15px;
+    }
+
+    p{
+        font-size: 1.3rem;
+    }
+
+    .botao i{
+        font-size: 2rem;
     }
 }
