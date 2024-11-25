@@ -205,7 +205,7 @@ function finalizarPartida() {
         
             setTimeout(() => {
                 window.location.href = 'pontuacao.html';
-            }, 2000);
+            }, 1000);
         } else {
             alert("Por favor, insira um nome antes de confirmar.");
         }
