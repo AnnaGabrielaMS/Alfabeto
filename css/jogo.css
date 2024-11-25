@@ -273,7 +273,7 @@ tr {
         font-size: 13px;
     }
 
-    h2{
+    header h2{
         margin: auto;
     }
 
@@ -284,13 +284,13 @@ tr {
     .teclado button {
         width: 38px;
         height: 44px;
-        margin: 3px;
+        margin: 2.5px;
         font-size: 30px;
     }
 
     .recuperar-nome {
         padding: 10px 20px;
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .recuperar-nome input {
@@ -309,13 +309,13 @@ tr {
     }
 
     .alfabeto-link{
-        top: 50px;
+        top: 60px;
         background-color: rgba(179, 176, 176, 0.3);
         border-radius: 5px;
     }
 
     .a4s-link{
-        top: 100px;
+        top: 105px;
     }
 
     .voltar{
@@ -324,19 +324,19 @@ tr {
 
     .confirmacao-sair-tela {
         padding: 0.60rem;
-        font-size: 0.6rem;
-        width: 230px;
+        font-size: 1rem;
+        width: 260px;
     }
     
     .confirmacao-sair-tela button {
         margin: 0.70rem 0.50rem;
-        font-size: 0.6rem;
-        padding: .40rem;
+        font-size: 0.8rem;
+        padding: .4rem;
     } 
 
 }
 
-@media (max-width: 400px) {
+@media (max-width: 380px) {
     .container img {
         width: 250px;
         max-height: 200px;
