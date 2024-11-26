@@ -32,15 +32,19 @@ p {
     margin: 30px auto;
 }
 
+.texto-botao{
+    font-size: 1.2rem;
+}
+
 .botao-salvar {
     display: block;
     font-size: 40px;
-    margin: 30px auto;
+    margin: 10px auto;
     width: 80px;
     height: 80px;
     cursor: pointer;
     background-color: rgba(207, 207, 207, 0.5);
-    box-shadow: 4px 4px 4px rgb(67, 66, 66);
+    box-shadow: 0 5px 5px 0 rgb(67, 66, 66);
     color: white;
     padding: 5px;
     border: 2px solid white;
@@ -66,7 +70,7 @@ p {
     }
 
     p{
-        margin-top: 50px;
+        margin-top: 20px;
         font-size: 3rem;
     }
     
