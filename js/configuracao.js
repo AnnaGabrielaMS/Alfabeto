@@ -2,32 +2,59 @@ window.onload = function() {
     aplicarConfiguracoes();
 }
 
-function mudarLetra() {
-    const tamanhoLetra = document.querySelector('input[name="letra"]:checked')?.value;
-    const tipoLetra = document.querySelector('input[name="tipo"]:checked')?.value;
+const VISUALIZAR = document.getElementById('visualizar-letras');
+
+function salvarConfiguracoes() {
+    const TAMANHO_LETRA = document.querySelector('input[name="letra"]:checked')?.value;
+    const TIPO_LETRA = document.querySelector('input[name="tipo"]:checked')?.value;
     
-    localStorage.setItem('letra', tamanhoLetra);
-    localStorage.setItem('tipo', tipoLetra);
+    localStorage.setItem('letra', TAMANHO_LETRA);
+    localStorage.setItem('tipo', TIPO_LETRA);
 
     aplicarConfiguracoes();
+
+    window.location.href = 'index.html';
 }
 
 function aplicarConfiguracoes() {
-    const tamanhoLetra = localStorage.getItem('letra');
-    const tipoLetra = localStorage.getItem('tipo');
-    const textos = document.querySelectorAll('.fonteDaLetra');
+    const TAMANHO_LETRA= localStorage.getItem('letra');
+    const TIPO_LETRA = localStorage.getItem('tipo');
+    const LETRAS = document.querySelectorAll('.fonteDaLetra');
     
-    textos.forEach(texto => {
-        if (tamanhoLetra === 'maiuscula') {
-            texto.style.textTransform = 'uppercase';
-        } else if (tamanhoLetra === 'minuscula') {
-            texto.style.textTransform = 'lowercase';
+    LETRAS.forEach(letra => {
+        if (TAMANHO_LETRA === 'maiuscula') {
+            letra.style.textTransform = 'uppercase';
+        } else if (TAMANHO_LETRA === 'minuscula') {
+            letra.style.textTransform = 'lowercase';
         }
 
-        if (tipoLetra === 'cursiva') {
-            texto.classList.add('fonte-cursiva');
+        if (TIPO_LETRA === 'cursiva') {
+            letra.classList.add('fonte-cursiva');
         } else {
-            texto.classList.remove('fonte-cursiva');
+            letra.classList.remove('fonte-cursiva');
         }
     });
+
+    if (TAMANHO_LETRA) {
+        document.querySelector(`input[name="letra"][value="${TAMANHO_LETRA}"]`).checked = true;
+    }
+    if (TIPO_LETRA) {
+        document.querySelector(`input[name="tipo"][value="${TIPO_LETRA}"]`).checked = true;
+    }
+}
+
+function letraCursiva(){
+    VISUALIZAR.classList.add('fonte-cursiva');
+}
+
+function letraBastao(){
+    VISUALIZAR.classList.remove('fonte-cursiva');
+}
+
+function letraMaiuscula(){
+    VISUALIZAR.style.textTransform = 'uppercase';
+}
+
+function letraMinuscula(){
+    VISUALIZAR.style.textTransform = 'lowercase';
 }
