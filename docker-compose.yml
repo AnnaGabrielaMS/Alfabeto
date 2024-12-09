@@ -1,0 +1,11 @@
+version: '3.5'
+
+services:
+  alfabeto:
+    container_name: alfabeto
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 1000:80
